@@ -5,19 +5,23 @@
 <body>
 <script>
     var i = 0;
+	var j=12;
     function score() {
         i = i + 1;
-		j=12;
+		j=j*0.6;
         resEl = document.getElementById('res');
         resEl.innerHTML = String(i);
+		anim.setAttribute('dur', String(j)+"s");
+		anim1.setAttribute('dur', String(j)+"s");
+		anim2.setAttribute('dur', String(j)+"s");
+		anim3.setAttribute('dur', String(j)+"s");
     }
 	function nullik() {
 		i = 0;
 		j=12;
-		j=j*0.7;
 		resEl = document.getElementById('res');
         resEl.innerHTML = String(i);
-		anim.setAttribute('dur', String(j)+"s");
+				anim.setAttribute('dur', String(j)+"s");
 		anim1.setAttribute('dur', String(j)+"s");
 		anim2.setAttribute('dur', String(j)+"s");
 		anim3.setAttribute('dur', String(j)+"s");
@@ -100,5 +104,6 @@
 </svg>
 <br />
 <h1>Score: <span id="res"></span></h1> 
+<audio autoplay src="музон.mp3"></audio>
 </body>
 </html>
